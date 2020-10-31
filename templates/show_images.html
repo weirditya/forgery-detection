@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body
+    {
+        background: white;
+    }
+</style>
+<title>Result</title>
+</head>
+<body>
+
+<div>
+<h2 style="text-align: center;">RESULT</h2>
+</div>
+
+<div style="text-align: center;">
+
+
+<h4>Image Name : {{img}}</h4>
+<br>
+
+
+<img src="/media/input_images/{{img}}" height="300" width="300" alt="">
+<img src="/media/output_images/output1/{{img}}" height="300" width="300" alt="">
+<img src="/media/output_images/output2/{{img}}" height="300" width="300" alt="">
+<br>
+<h1 style="color: {{colour}};"> {{ output }}</h1>
+<br><br><br>
+
+
+<form action="{% url 'index' %}">
+<input class= 'btn btn-primary' type="submit" value="Detect Another Image">
+</form>
+</div>
+</body>
+</html>
